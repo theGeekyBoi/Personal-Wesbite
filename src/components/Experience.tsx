@@ -2,28 +2,43 @@
 const Experience = () => {
   const experiences = [
     {
-      role: "Statistical Process Control Intern",
-      company: "Micron Technology",
-      period: "May 2025 – Present",
-      description: "R2R control for semiconductors, SPC analysis, process optimization."
+      role: "Statistical Process Control Engineer",
+      company: "Micron Technology, Inc.",
+      period: "May 2025 – Present, Manassas, VA",
+      points: [
+        "Developed and implemented R2R control solutions to enhance semiconductor process capability",
+        "Monitored and analyzed real-time production data using Statistical Process Control (SPC) techniques to identify opportunities for yield and stability improvements",
+        "Collaborated with Process Engineering and Integration teams to optimize control methodologies across fabrication processes",
+        "Built automation and change point monitoring scripts to generate weekly reports and conduct various checks",
+        "Built an ARIMA predictive model to flag issues in future R2R settings",
+      ]
     },
     {
       role: "Vice President of Engineering",
-      company: "VT CRO",
-      period: "2024 – Present",
-      description: "Leading 120+ engineers, major design contributor to Workcell 25'26'."
+      company: "Virginia Tech Competitive Robotics Organization (VTCRO)",
+      period: "Sep 2023 – Present, Blacksburg, VA",
+      points: [
+        "Lead 120+ engineers across 8 multidisciplinary design teams; ECE Lead for Workcell 25'26'",
+        "Developed “Workcell,” a fully custom autonomous 3D print farm with dual printers, plate swapping, storage, and print queue system",
+        "Won National Robotics Challenge 2025 — Gold Award and Honda Innovation Award",
+        "Designed and built robotic systems with major contributions in ECE and mechanical subsystems",
+      ]
     },
     {
       role: "Undergraduate Teaching Assistant",
-      company: "ECE 2514 - Virginia Tech",
-      period: "2024 – Present",
-      description: "Teaching C++, Git, CMake, logic visualization."
+      company: "Virginia Tech — ECE 2514: Computational Engineering",
+      period: "Aug 2024 – Dec 2024",
+      points: [
+        "Guided students through foundational C++ concepts and assignments during weekly office hours",
+        "Led in-person lab sessions focused on hands-on programming and problem-solving",
+        "Supported student development with Git, CMake, and logic visualization tools",
+      ]
     },
     {
       role: "Frontend & Backend Developer Intern",
       company: "CueBlocks",
       period: "2020",
-      description: "Frontend and backend web development."
+      points: ["Frontend and backend web development."]
     }
   ];
 
@@ -35,7 +50,7 @@ const Experience = () => {
             Experience
           </h2>
           <p className="text-xl text-gray-600 font-light">
-            Building the future through technology
+            What I've done
           </p>
         </div>
         
@@ -47,9 +62,13 @@ const Experience = () => {
                   <h3 className="text-2xl font-medium text-black mb-2">{exp.role}</h3>
                   <p className="text-xl text-gray-600 font-light">{exp.company}</p>
                 </div>
-                <span className="text-gray-500 font-medium mt-2 md:mt-0">{exp.period}</span>
+                <span className="text-gray-500 font-medium mt-2 md:mt-0 text-right">{exp.period}</span>
               </div>
-              <p className="text-lg text-gray-600 leading-relaxed">{exp.description}</p>
+              <ul className="list-disc list-inside space-y-2">
+                {exp.points.map((point, i) => (
+                  <li key={i} className="text-lg text-gray-600 leading-relaxed">{point}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

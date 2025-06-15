@@ -1,17 +1,24 @@
-
 const Projects = () => {
   const projects = [
     {
       title: "Workcell",
       subtitle: "Autonomous 3D Print Farm",
       description: "Built for VT CRO with dual printers, plate swapping, and queue system. Won Gold Award + Honda Innovation Award at National Robotics Challenge 2025.",
-      tags: ["Robotics", "Automation", "3D Printing"]
+      tags: ["Robotics", "Automation", "3D Printing"],
+      links: [
+        { name: "VT News Article", url: "https://news.vt.edu/videos/k/2025/05/1_sqih9t9l.html" }
+      ]
     },
     {
-      title: "MADS",
+      title: "NFTE World Series of Innovation 2023 Winner – MADS",
       subtitle: "Milk Adulteration Detection System",
       description: "Detected urea using UV + image processing. Pitched to Nestlé, received commendation letter, published in IJISRT, and selected as Top 10 Finalist in NFTE Innovation Challenge.",
-      tags: ["Machine Learning", "Image Processing", "IoT"]
+      tags: ["Machine Learning", "Image Processing", "IoT"],
+      links: [
+        { name: "Nestlé Letter", url: "http://tiny.cc/nestleletter" },
+        { name: "NFTE Panel", url: "https://nfte.com/aadityas-story/" },
+        { name: "IJISRT Paper", url: "https://ijisrt.com/urea-concentration-detection-in-milk-using-microscopic-image-processing-algorithm-under-ultraviolet-light-approach" },
+      ]
     },
     {
       title: "EcoCube",
@@ -28,14 +35,14 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-32 bg-white px-6 md:px-12">
+    <section id="projects" className="py-32 bg-white px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20 animate-fade-in">
           <h2 className="text-5xl md:text-6xl font-thin text-black mb-6 tracking-tight">
-            Featured Projects
+            Projects
           </h2>
           <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
-            Innovation through engineering excellence
+            What I've built
           </p>
         </div>
         
@@ -46,13 +53,28 @@ const Projects = () => {
                 <h3 className="text-4xl font-light text-black mb-4">{project.title}</h3>
                 <p className="text-xl text-gray-500 mb-6 font-light">{project.subtitle}</p>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">{project.description}</p>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 mb-6">
                   {project.tags.map((tag, tagIndex) => (
                     <span key={tagIndex} className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
                       {tag}
                     </span>
                   ))}
                 </div>
+                {project.links && (
+                   <div className="flex flex-wrap gap-x-4 gap-y-2">
+                    {project.links.map((link) => (
+                      <a
+                        key={link.name}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline text-sm font-medium"
+                      >
+                        {link.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
               <div className={`bg-gray-100 rounded-2xl h-80 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 {/* Placeholder for project image/demo */}

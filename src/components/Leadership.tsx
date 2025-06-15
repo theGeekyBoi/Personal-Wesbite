@@ -3,17 +3,17 @@ const Leadership = () => {
   const initiatives = [
     {
       title: "Courses By You",
-      description: "Founded student-led teaching organization. Taught 350+ students coding, robotics, AI, and logic. Certified by FuturoKnowledge.",
+      description: "Founded student-led teaching organization. Taught 350+ students, led 2 other instructors, personally mentored 3 students. Designed and delivered workshops on coding, robotics, logic, and public speaking. Partnered with FuturoKnowledge for certification.",
       impact: "350+ Students Taught"
     },
     {
       title: "Plasmassist / Covassist",
-      description: "Co-founded COVID-19 relief platform. Connected 1,500+ people to plasma and resources. Led 14 volunteers. Built live database and platform.",
+      description: "Founded two community response platforms during COVID-19. Connected 15+ people to life-saving plasma and 1500+ users to verified COVID resources. Built live databases and led 14-person volunteer team.",
       impact: "1,500+ People Helped"
     },
     {
       title: "Terra House Captain",
-      description: "Won House Cup after 9 years, Student Council, Event Host for quizzes and PDC/MUNs.",
+      description: "Led 120+ students. Won House Cup after 9 years. Student Council Member (2022–2023). Achieved highest team participation rate across inter-house events. Event Host for quizzes and PDC/MUNs.",
       impact: "House Cup Winner"
     }
   ];
@@ -26,7 +26,7 @@ const Leadership = () => {
             Leadership & Initiatives
           </h2>
           <p className="text-xl text-gray-600 font-light">
-            Making a difference through community impact
+            What I've led
           </p>
         </div>
         

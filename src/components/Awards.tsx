@@ -1,13 +1,13 @@
 
 const Awards = () => {
   const awards = [
+    "Dean’s List (2023, 2024, 2025)",
+    "Honors College – Virginia Tech",
+    "National Robotics Challenge 2025 – Gold Award & Honda Innovation Award",
+    "NFTE World Series of Innovation 2023 – Winner",
     "Best in Course – Integrated Design Project (Spring 2025)",
-    "Dean's List (Fall '23, Spring '24)",
-    "National Robotics Challenge – Gold + Honda Award",
-    "NFTE Innovation Finalist",
-    "STEM Harmony Award Winner",
-    "SciCreate & Innovators Winner",
-    "ACT: 35 Composite (36 English/Science, 34 Math/Reading)"
+    "tGELF Harmony 2022 – Best Use of STEM Award",
+    "SASMO – Singapore and Asian Schools Math Olympiad (International Rank: 52nd, National Rank: 10th, Gold Medal Winner)",
   ];
 
   return (

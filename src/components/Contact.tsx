@@ -1,5 +1,6 @@
 
 import { Button } from "./ui/button";
+import { Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -15,34 +16,27 @@ const Contact = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Button 
-              size="lg" 
-              className="bg-black text-white hover:bg-gray-800 rounded-full px-8 py-6 text-lg font-medium transition-all duration-300"
-            >
-              Email Me
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-gray-300 text-gray-700 hover:bg-gray-50 rounded-full px-8 py-6 text-lg font-medium transition-all duration-300"
-            >
-              LinkedIn
-            </Button>
+            <a href="mailto:aaditya07@vt.edu">
+              <Button 
+                size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8 py-6 text-lg font-medium transition-all duration-300"
+              >
+                Email Me
+              </Button>
+            </a>
+            <a href="https://www.linkedin.com/in/aaditya-sharma-0611002b1/" target="_blank" rel="noopener noreferrer">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-gray-300 text-gray-700 hover:bg-gray-50 rounded-full px-8 py-6 text-lg font-medium transition-all duration-300"
+              >
+                <Linkedin className="mr-2 h-5 w-5" />
+                LinkedIn
+              </Button>
+            </a>
           </div>
           
-          <div className="border-t border-gray-200 pt-8">
-            <p className="text-gray-500 mb-4">aaditya07@vt.edu</p>
-            <p className="text-sm text-gray-400">
-              <a 
-                href="https://tiny.cc/NestleLetter" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-gray-600 transition-colors"
-              >
-                View Nestlé Commendation Letter
-              </a>
-            </p>
-          </div>
+          <p className="text-gray-500">aaditya07@vt.edu</p>
         </div>
       </div>
     </section>
