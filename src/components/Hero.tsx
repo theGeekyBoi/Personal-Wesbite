@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-white px-6 md:px-12">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
-        <Avatar className="w-32 h-32 mx-auto mb-8 shadow-md">
+        <Avatar className="w-48 h-48 mx-auto mb-8 shadow-lg">
           <AvatarImage src="/lovable-uploads/345ee6bf-7087-4013-bf4e-4daa7c82c55e.png" alt="Aaditya Sharma" />
           <AvatarFallback>AS</AvatarFallback>
         </Avatar>
@@ -33,7 +33,7 @@ const Hero = () => {
               size="lg"
               className="border-gray-300 text-gray-700 hover:bg-gray-50 rounded-full px-8 py-6 text-lg font-medium transition-all duration-300"
             >
-              Download Resume
+              Resume
             </Button>
           </a>
         </div>

@@ -33,7 +33,7 @@ const Leadership = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {initiatives.map((initiative, index) => (
             <div key={index} className="animate-scale-in bg-gray-50 p-8 rounded-2xl">
-              <h3 className="text-2xl font-medium text-black mb-4">{initiative.title}</h3>
+              <h3 className="text-2xl font-medium text-primary mb-4">{initiative.title}</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">{initiative.description}</p>
               <div className="inline-block bg-black text-white px-4 py-2 rounded-full text-sm font-medium">
                 {initiative.impact}

@@ -1,3 +1,4 @@
+
 const Projects = () => {
   const projects = [
     {
@@ -7,30 +8,34 @@ const Projects = () => {
       tags: ["Robotics", "Automation", "3D Printing"],
       links: [
         { name: "VT News Article", url: "https://news.vt.edu/videos/k/2025/05/1_sqih9t9l.html" }
-      ]
+      ],
+      image: "/lovable-uploads/f295f59d-b4eb-4278-aeb7-d482c5b1aa4f.png"
     },
     {
-      title: "NFTE World Series of Innovation 2023 Winner – MADS",
+      title: "MADS",
       subtitle: "Milk Adulteration Detection System",
-      description: "Detected urea using UV + image processing. Pitched to Nestlé, received commendation letter, published in IJISRT, and selected as Top 10 Finalist in NFTE Innovation Challenge.",
+      description: "Detected urea using UV + image processing. Pitched to Nestlé, received commendation letter, published in IJISRT, and NFTE World Series of Innovation 2023 Winner.",
       tags: ["Machine Learning", "Image Processing", "IoT"],
       links: [
         { name: "Nestlé Letter", url: "http://tiny.cc/nestleletter" },
         { name: "NFTE Panel", url: "https://nfte.com/aadityas-story/" },
         { name: "IJISRT Paper", url: "https://ijisrt.com/urea-concentration-detection-in-milk-using-microscopic-image-processing-algorithm-under-ultraviolet-light-approach" },
-      ]
+      ],
+      image: "/lovable-uploads/0393c7f2-eaac-4f54-a281-2af3271d7da9.png"
     },
     {
       title: "EcoCube",
       subtitle: "Smart Environmental System",
       description: "Combining solar, wind, irrigation, and carbon capture. STEM Award Winner – tGELF Harmony.",
-      tags: ["Sustainability", "IoT", "Environmental"]
+      tags: ["Sustainability", "IoT", "Environmental"],
+      image: "/lovable-uploads/10603dde-9cf7-4702-98b0-44943d281e5f.png"
     },
     {
       title: "Medicle",
-      subtitle: "Real-time Vitals Monitoring",
+      subtitle: "Vital Health Checkups for Rural India",
       description: "Real-time vitals monitoring cubicle for rural India. CodeHack Winner.",
-      tags: ["Healthcare", "IoT", "Social Impact"]
+      tags: ["Healthcare", "IoT", "Social Impact"],
+      image: "/lovable-uploads/6f252514-c56c-4a80-a4d3-5502d1fce17f.png"
     }
   ];
 
@@ -50,7 +55,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={index} className={`animate-fade-in-up grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                <h3 className="text-4xl font-light text-black mb-4">{project.title}</h3>
+                <h3 className="text-4xl font-light text-primary mb-4">{project.title}</h3>
                 <p className="text-xl text-gray-500 mb-6 font-light">{project.subtitle}</p>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -76,11 +81,14 @@ const Projects = () => {
                   </div>
                 )}
               </div>
-              <div className={`bg-gray-100 rounded-2xl h-80 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                {/* Placeholder for project image/demo */}
-                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                  Project Showcase
-                </div>
+              <div className={`bg-gray-100 rounded-2xl h-96 flex items-center justify-center overflow-hidden ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                {project.image ? (
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-gray-400">
+                    Project Showcase
+                  </div>
+                )}
               </div>
             </div>
           ))}

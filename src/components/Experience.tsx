@@ -22,7 +22,8 @@ const Experience = () => {
         "Developed “Workcell,” a fully custom autonomous 3D print farm with dual printers, plate swapping, storage, and print queue system",
         "Won National Robotics Challenge 2025 — Gold Award and Honda Innovation Award",
         "Designed and built robotic systems with major contributions in ECE and mechanical subsystems",
-      ]
+      ],
+      link: "https://www.vtcro.org/"
     },
     {
       role: "Undergraduate Teaching Assistant",
@@ -33,12 +34,6 @@ const Experience = () => {
         "Led in-person lab sessions focused on hands-on programming and problem-solving",
         "Supported student development with Git, CMake, and logic visualization tools",
       ]
-    },
-    {
-      role: "Frontend & Backend Developer Intern",
-      company: "CueBlocks",
-      period: "2020",
-      points: ["Frontend and backend web development."]
     }
   ];
 
@@ -59,8 +54,14 @@ const Experience = () => {
             <div key={index} className="animate-fade-in-up bg-white p-10 rounded-2xl shadow-sm border border-gray-100">
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
                 <div>
-                  <h3 className="text-2xl font-medium text-black mb-2">{exp.role}</h3>
-                  <p className="text-xl text-gray-600 font-light">{exp.company}</p>
+                  <h3 className="text-2xl font-medium text-primary mb-2">{exp.role}</h3>
+                  {exp.link ? (
+                    <a href={exp.link} target="_blank" rel="noopener noreferrer" className="text-xl text-gray-600 font-light hover:underline">
+                      {exp.company}
+                    </a>
+                  ) : (
+                    <p className="text-xl text-gray-600 font-light">{exp.company}</p>
+                  )}
                 </div>
                 <span className="text-gray-500 font-medium mt-2 md:mt-0 text-right">{exp.period}</span>
               </div>

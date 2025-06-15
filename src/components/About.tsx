@@ -19,7 +19,7 @@ const About = () => {
               I'm working hard to ensure the machines rise with us, not against us.
             </p>
             <div className="mt-12">
-              <h3 className="text-2xl font-medium text-black mb-4">Hobbies & Interests</h3>
+              <h3 className="text-2xl font-medium text-primary mb-4">Hobbies & Interests</h3>
               <div className="flex flex-wrap gap-3">
                 {hobbies.map((hobby) => (
                   <span key={hobby} className="px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-medium border border-gray-200">
@@ -31,12 +31,12 @@ const About = () => {
           </div>
           <div className="animate-scale-in space-y-8">
             <div className="bg-white p-8 rounded-2xl shadow-sm">
-              <h3 className="text-2xl font-medium text-black mb-4">Education</h3>
+              <h3 className="text-2xl font-medium text-primary mb-4">Education</h3>
               <p className="text-gray-600 mb-2">B.S. in Computer Engineering at Virginia Tech with a focus in Control, Robotics, and Autonomy and Machine Learning. Minor in Computer Science.</p>
               <p className="text-gray-600">GPA: 3.73 | Dean's List | Honors College</p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-sm">
-              <h3 className="text-2xl font-medium text-black mb-4">Current Role</h3>
+              <h3 className="text-2xl font-medium text-primary mb-4">Current Role</h3>
               <p className="text-gray-600 mb-2">Statistical Process Control Intern</p>
               <p className="text-gray-600">Micron Technology</p>
             </div>

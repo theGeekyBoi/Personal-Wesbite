@@ -1,8 +1,7 @@
 
 const Awards = () => {
   const awards = [
-    "Dean’s List (2023, 2024, 2025)",
-    "Honors College – Virginia Tech",
+    "Dean’s List (2023, 2024, 2025)\nHonors College – Virginia Tech",
     "National Robotics Challenge 2025 – Gold Award & Honda Innovation Award",
     "NFTE World Series of Innovation 2023 – Winner",
     "Best in Course – Integrated Design Project (Spring 2025)",
@@ -24,8 +23,8 @@ const Awards = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {awards.map((award, index) => (
-            <div key={index} className="animate-fade-in-up bg-gray-900 p-6 rounded-xl border border-gray-800">
-              <p className="text-white font-light leading-relaxed">{award}</p>
+            <div key={index} className="animate-fade-in-up bg-gray-900 p-6 rounded-xl border border-gray-800 flex items-center justify-center text-center">
+              <p className="text-white font-light leading-relaxed whitespace-pre-line">{award}</p>
             </div>
           ))}
         </div>
