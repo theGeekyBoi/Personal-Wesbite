@@ -1,4 +1,3 @@
-
 const Projects = () => {
   const projects = [
     {
@@ -9,7 +8,7 @@ const Projects = () => {
       links: [
         { name: "VT News Article", url: "https://news.vt.edu/videos/k/2025/05/1_sqih9t9l.html" }
       ],
-      image: "/lovable-uploads/f295f59d-b4eb-4278-aeb7-d482c5b1aa4f.png"
+      image: "/lovable-uploads/7cc48eea-1401-4933-b7c1-5889ecc3eb02.png"
     },
     {
       title: "MADS",

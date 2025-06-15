@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-white px-6 md:px-12">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
-        <Avatar className="w-48 h-48 mx-auto mb-8 shadow-lg">
+        <Avatar className="w-36 h-36 mx-auto mb-8 shadow-lg">
           <AvatarImage src="/lovable-uploads/345ee6bf-7087-4013-bf4e-4daa7c82c55e.png" alt="Aaditya Sharma" />
           <AvatarFallback>AS</AvatarFallback>
         </Avatar>
