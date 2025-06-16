@@ -1,21 +1,13 @@
 
 import { Button } from "./ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Linkedin } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-white px-6 md:px-12">
       <div className="max-w-4xl mx-auto text-center animate-fade-in">
-        <div className="flex items-center justify-center gap-6 mb-8">
-          <Avatar className="w-24 h-24 shadow-lg">
-            <AvatarImage src="/lovable-uploads/345ee6bf-7087-4013-bf4e-4daa7c82c55e.png" alt="Aaditya Sharma" className="object-cover" />
-            <AvatarFallback>AS</AvatarFallback>
-          </Avatar>
-          <h1 className="text-6xl md:text-8xl font-thin text-black tracking-tight">
-            Aaditya Sharma
-          </h1>
-        </div>
+        <h1 className="text-6xl md:text-8xl font-thin text-black mb-6 tracking-tight">
+          Aaditya Sharma
+        </h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-12 font-light max-w-3xl mx-auto leading-relaxed">
           Computer Engineer | Robotics Innovator | Cool Guy
         </p>
