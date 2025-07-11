@@ -1,3 +1,4 @@
+
 const Experience = () => {
   const experiences = [
     {
@@ -16,7 +17,7 @@ const Experience = () => {
       period: "Sep 2023 – Present, Blacksburg, VA",
       points: [
         "Lead 120+ engineers across 8 multidisciplinary design teams; ECE Lead for Workcell 25'26'",
-        "Developed "Workcell," a fully custom autonomous 3D print farm with dual printers, plate swapping, storage, and print queue system",
+        "Developed \"Workcell,\" a fully custom autonomous 3D print farm with dual printers, plate swapping, storage, and print queue system",
         "Won National Robotics Challenge 2025 — Gold Award and Honda Innovation Award",
         "Designed and built robotic systems with major contributions in ECE and mechanical subsystems",
       ],
