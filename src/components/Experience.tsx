@@ -1,16 +1,13 @@
-
 const Experience = () => {
   const experiences = [
     {
-      role: "Statistical Process Control Engineer",
+      role: "Statistical Process Control and R2R Engineer",
       company: "Micron Technology, Inc.",
       period: "May 2025 – Present, Manassas, VA",
       points: [
-        "Developed and implemented R2R control solutions to enhance semiconductor process capability",
-        "Monitored and analyzed real-time production data using Statistical Process Control (SPC) techniques to identify opportunities for yield and stability improvements",
-        "Collaborated with Process Engineering and Integration teams to optimize control methodologies across fabrication processes",
-        "Built automation and change point monitoring scripts to generate weekly reports and conduct various checks",
-        "Built an ARIMA predictive model to flag issues in future R2R settings",
+        "Developed proprietary Change Point Monitoring (CPM) system for R2R automation, enabling realtime detection of negative or unintended process changes through data analysis",
+        "Developed ARIMA-based predictive model to analyze GeRM RPA data, identifying trends, shifts, and clamps to proactively flag and mitigate potential wafer processing issues",
+        "Built automation of Metric Data Reports, utilizing Tableau API calls to extract and structure data for weekly reporting, significantly improving accessibility and efficiency for SPC engineering teams",
       ]
     },
     {
@@ -19,7 +16,7 @@ const Experience = () => {
       period: "Sep 2023 – Present, Blacksburg, VA",
       points: [
         "Lead 120+ engineers across 8 multidisciplinary design teams; ECE Lead for Workcell 25'26'",
-        "Developed “Workcell,” a fully custom autonomous 3D print farm with dual printers, plate swapping, storage, and print queue system",
+        "Developed "Workcell," a fully custom autonomous 3D print farm with dual printers, plate swapping, storage, and print queue system",
         "Won National Robotics Challenge 2025 — Gold Award and Honda Innovation Award",
         "Designed and built robotic systems with major contributions in ECE and mechanical subsystems",
       ],

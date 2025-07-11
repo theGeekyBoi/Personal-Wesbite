@@ -21,7 +21,7 @@ const Hero = () => {
           >
             View My Work
           </Button>
-          <a href="https://drive.google.com/file/d/1AkAncwnqihNj32Tw1eltdqR9z00_tjdw/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <a href="https://d3ey0ivtc68uxj.cloudfront.net/public/743f8f2daaf2f0b7f1aff4e3a081025f.pdf" target="_blank" rel="noopener noreferrer">
             <Button
               variant="outline"
               size="lg"
