@@ -1,3 +1,4 @@
+
 const About = () => {
   const hobbies = [
     "Music", "Tennis", "Movies", "Dinosaurs", "Books", "Coffee", "Cats", "NBA", "Debate", "Cooking"
@@ -32,7 +33,7 @@ const About = () => {
             <div className="bg-white p-8 rounded-2xl shadow-sm">
               <h3 className="text-2xl font-medium text-primary mb-4">Education</h3>
               <p className="text-gray-600 mb-2">B.S. in Computer Engineering at Virginia Tech with a focus in Control, Robotics, and Autonomy and Machine Learning. Minor in Computer Science.</p>
-              <p className="text-gray-600">GPA: 3.73 | Dean's List | Honors College</p>
+              <p className="text-gray-600">GPA: 3.64 | Dean's List | Honors College</p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-sm">
               <h3 className="text-2xl font-medium text-primary mb-4">Current Role</h3>
