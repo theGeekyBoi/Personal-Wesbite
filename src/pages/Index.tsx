@@ -6,10 +6,12 @@ import Experience from "@/components/Experience";
 import Leadership from "@/components/Leadership";
 import Awards from "@/components/Awards";
 import Contact from "@/components/Contact";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-white font-sans relative">
+      <AnimatedBackground />
       <Hero />
       <About />
       <Projects />
