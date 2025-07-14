@@ -1,7 +1,6 @@
-
 const About = () => {
   const hobbies = [
-    "Music", "Tennis", "Movies", "Dinosaurs", "Books", "Coffee", "Cats", "NBA", "Debate"
+    "Music", "Tennis", "Movies", "Dinosaurs", "Books", "Coffee", "Cats", "NBA", "Debate", "Cooking"
   ];
 
   return (
@@ -37,7 +36,7 @@ const About = () => {
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-sm">
               <h3 className="text-2xl font-medium text-primary mb-4">Current Role</h3>
-              <p className="text-gray-600 mb-2">Statistical Process Control Intern</p>
+              <p className="text-gray-600 mb-2">Statistical Process Control and R2R Engineer</p>
               <p className="text-gray-600">Micron Technology</p>
             </div>
           </div>
