@@ -82,9 +82,9 @@ const AnimatedBackground = () => {
     >
       {/* Primary gradient blob */}
       <div
-        className="blob absolute w-96 h-96 rounded-full opacity-20"
+        className="blob absolute w-96 h-96 rounded-full opacity-40"
         style={{
-          background: 'radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, hsl(196, 71%, 24%) 0%, transparent 70%)',
           filter: 'blur(40px)',
           top: '10%',
           left: '15%',
@@ -94,9 +94,9 @@ const AnimatedBackground = () => {
       
       {/* Secondary gradient blob */}
       <div
-        className="blob absolute w-80 h-80 rounded-full opacity-15"
+        className="blob absolute w-80 h-80 rounded-full opacity-30"
         style={{
-          background: 'radial-gradient(circle, #bc04d0 0%, hsl(var(--primary)) 40%, transparent 70%)',
+          background: 'radial-gradient(circle, #bc04d0 0%, hsl(196, 71%, 24%) 40%, transparent 70%)',
           filter: 'blur(50px)',
           top: '60%',
           right: '20%',
@@ -106,9 +106,9 @@ const AnimatedBackground = () => {
       
       {/* Accent blob */}
       <div
-        className="blob absolute w-64 h-64 rounded-full opacity-25"
+        className="blob absolute w-64 h-64 rounded-full opacity-35"
         style={{
-          background: 'radial-gradient(circle, hsl(var(--accent)) 0%, #bc04d0 50%, transparent 70%)',
+          background: 'radial-gradient(circle, hsl(210, 40%, 96%) 0%, #bc04d0 50%, transparent 70%)',
           filter: 'blur(35px)',
           top: '30%',
           right: '10%',
@@ -118,9 +118,9 @@ const AnimatedBackground = () => {
       
       {/* Large ambient blob */}
       <div
-        className="blob absolute w-[600px] h-[400px] rounded-full opacity-10"
+        className="blob absolute w-[600px] h-[400px] rounded-full opacity-25"
         style={{
-          background: 'linear-gradient(45deg, hsl(var(--primary)) 0%, #bc04d0 30%, hsl(var(--secondary)) 70%, transparent 100%)',
+          background: 'linear-gradient(45deg, hsl(196, 71%, 24%) 0%, #bc04d0 30%, hsl(210, 40%, 96%) 70%, transparent 100%)',
           filter: 'blur(80px)',
           bottom: '10%',
           left: '30%',
@@ -130,21 +130,13 @@ const AnimatedBackground = () => {
       
       {/* Metallic accent blob */}
       <div
-        className="blob absolute w-72 h-72 rounded-full opacity-12"
+        className="blob absolute w-72 h-72 rounded-full opacity-20"
         style={{
-          background: 'conic-gradient(from 0deg, #bc04d0, hsl(var(--primary)), #bc04d0, hsl(var(--muted)))',
+          background: 'conic-gradient(from 0deg, #bc04d0, hsl(196, 71%, 24%), #bc04d0, hsl(210, 40%, 96%))',
           filter: 'blur(45px)',
           top: '80%',
           left: '10%',
           willChange: 'transform'
-        }}
-      />
-      
-      {/* Subtle overlay gradient for depth */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          background: 'radial-gradient(ellipse at center, transparent 40%, hsl(var(--background)) 100%)'
         }}
       />
     </div>
