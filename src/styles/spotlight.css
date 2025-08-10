@@ -8,6 +8,11 @@
   --spotlight-y: 50%;
   /* Blend mode customizable per section/page via CSS var */
   --spotlight-blend: soft-light; /* e.g., overlay, multiply, normal */
+  /* Opacity stops (tweak per section if needed) */
+  --spotlight-o1: 0.18;
+  --spotlight-o2: 0.12;
+  --spotlight-o3: 0.08;
+  --spotlight-o4: 0.04;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -17,7 +22,7 @@
 .cursor-spotlight {
   position: fixed;
   inset: 0;
-  z-index: 5; /* Above backgrounds, below tooltips/menus (which are typically higher) */
+  z-index: 20; /* Above backgrounds, below tooltips/menus (z-50+) */
   pointer-events: none; /* Do not obstruct clicks/hover/focus */
 
   /* Smooth opacity transitions when toggling */
@@ -26,17 +31,18 @@
   /* Fallback to normal blend if unsupported handled by @supports below */
   mix-blend-mode: var(--spotlight-blend, normal);
 
-  /* High-quality gradient with multiple stops to avoid banding */
+  /* High-quality gradient with proportional stops to avoid banding */
   background: radial-gradient(
     circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y),
-    hsl(var(--foreground) / 0.12) 0px,
-    hsl(var(--foreground) / 0.09) 60px,
-    hsl(var(--foreground) / 0.06) 120px,
-    hsl(var(--foreground) / 0.03) 180px,
-    hsl(var(--foreground) / 0.00) 220px
+    hsl(var(--foreground) / var(--spotlight-o1)) 0,
+    hsl(var(--foreground) / var(--spotlight-o2)) calc(var(--spotlight-radius) * 0.45),
+    hsl(var(--foreground) / var(--spotlight-o3)) calc(var(--spotlight-radius) * 0.75),
+    hsl(var(--foreground) / var(--spotlight-o4)) var(--spotlight-radius),
+    transparent calc(var(--spotlight-radius) * 1.2)
   );
-  /* Ensure the gradient renders crisply */
+  /* Ensure the gradient renders crisply and remains isolated for perf */
   will-change: background;
+  contain: layout paint style;
 }
 
 /* Prefer soft-light when supported */
@@ -54,16 +60,12 @@
   --spotlight-blend: soft-light;
 }
 
-.dark .cursor-spotlight {
-  /* In dark mode, increase center subtly for a lift */
-  background: radial-gradient(
-    circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y),
-    hsl(var(--foreground) / 0.14) 0px,
-    hsl(var(--foreground) / 0.10) 70px,
-    hsl(var(--foreground) / 0.07) 140px,
-    hsl(var(--foreground) / 0.04) 200px,
-    hsl(var(--foreground) / 0.00) 260px
-  );
+.dark {
+  /* In dark mode, slightly stronger lift via higher opacities */
+  --spotlight-o1: 0.22;
+  --spotlight-o2: 0.16;
+  --spotlight-o3: 0.10;
+  --spotlight-o4: 0.05;
 }
 
 /* Allow per-section overrides: set --spotlight-blend on any ancestor
