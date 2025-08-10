@@ -1,0 +1,70 @@
+/* Cursor Spotlight Styles - lightweight and theme-aware */
+
+:root {
+  /* Radius controls the size of the spotlight (accepts px) */
+  --spotlight-radius: 200px; /* default within requested 160–220px */
+  /* Position updated via JS */
+  --spotlight-x: 50%;
+  --spotlight-y: 50%;
+  /* Blend mode customizable per section/page via CSS var */
+  --spotlight-blend: soft-light; /* e.g., overlay, multiply, normal */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-spotlight { display: none; }
+}
+
+.cursor-spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: 5; /* Above backgrounds, below tooltips/menus (which are typically higher) */
+  pointer-events: none; /* Do not obstruct clicks/hover/focus */
+
+  /* Smooth opacity transitions when toggling */
+  transition: opacity 120ms ease-out;
+
+  /* Fallback to normal blend if unsupported handled by @supports below */
+  mix-blend-mode: var(--spotlight-blend, normal);
+
+  /* High-quality gradient with multiple stops to avoid banding */
+  background: radial-gradient(
+    circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y),
+    hsl(var(--foreground) / 0.12) 0px,
+    hsl(var(--foreground) / 0.09) 60px,
+    hsl(var(--foreground) / 0.06) 120px,
+    hsl(var(--foreground) / 0.03) 180px,
+    hsl(var(--foreground) / 0.00) 220px
+  );
+  /* Ensure the gradient renders crisply */
+  will-change: background;
+}
+
+/* Prefer soft-light when supported */
+@supports (mix-blend-mode: soft-light) {
+  .cursor-spotlight {
+    mix-blend-mode: var(--spotlight-blend, soft-light);
+  }
+}
+
+/* Light vs Dark adjustments
+   Using theme tokens: foreground is light in dark mode and dark in light mode
+   which keeps the effect a subtle luminance lift appropriate to theme. */
+:root {
+  /* In light mode, very subtle to avoid blowing out whites - slightly darker vignette via soft-light */
+  --spotlight-blend: soft-light;
+}
+
+.dark .cursor-spotlight {
+  /* In dark mode, increase center subtly for a lift */
+  background: radial-gradient(
+    circle var(--spotlight-radius) at var(--spotlight-x) var(--spotlight-y),
+    hsl(var(--foreground) / 0.14) 0px,
+    hsl(var(--foreground) / 0.10) 70px,
+    hsl(var(--foreground) / 0.07) 140px,
+    hsl(var(--foreground) / 0.04) 200px,
+    hsl(var(--foreground) / 0.00) 260px
+  );
+}
+
+/* Allow per-section overrides: set --spotlight-blend on any ancestor
+   e.g., section { --spotlight-blend: overlay; } */

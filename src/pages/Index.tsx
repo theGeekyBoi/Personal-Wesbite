@@ -7,11 +7,12 @@ import Leadership from "@/components/Leadership";
 import Awards from "@/components/Awards";
 import Contact from "@/components/Contact";
 import AnimatedBackground from "@/components/AnimatedBackground";
-
+import CursorSpotlight from "@/components/CursorSpotlight";
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-sans relative">
       <AnimatedBackground />
+      <CursorSpotlight />
       <Hero />
       <About />
       <Projects />
