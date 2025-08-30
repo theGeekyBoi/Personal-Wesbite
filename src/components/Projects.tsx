@@ -23,6 +23,17 @@ const Projects = () => {
       image: "/lovable-uploads/0393c7f2-eaac-4f54-a281-2af3271d7da9.png"
     },
     {
+      title: "Wireless Sensor Node (WSN)",
+      subtitle: "Solar-Powered Fire Detection System",
+      description: "Built a solar-powered wireless sensor node with temperature and smoke detection for early fire monitoring. Integrated a closed-loop DC/DC boost converter with PI control, Bluetooth communication, and a custom GUI. Awarded Best in Course.",
+      tags: ["Power Electronics", "Embedded Systems", "IoT"],
+      links: [
+        { name: "GitHub Repo", url: "https://github.com/theGeekyBoi/IDP-WSN-G3" },
+        { name: "Final Report", url: "https://drive.google.com/file/d/1h9KD5ITG0ahq8rcduBs8dH2fFiilx71S/view?usp=sharing" }
+      ],
+      image: "/lovable-uploads/47f9a8bb-2c4a-4711-98dd-d6e38ce15a31.png"
+    },
+    {
       title: "EcoCube",
       subtitle: "Smart Environmental System",
       description: "Combining solar, wind, irrigation, and carbon capture. STEM Award Winner – tGELF Harmony.",
@@ -35,16 +46,6 @@ const Projects = () => {
       description: "Real-time vitals monitoring cubicle for rural India. CodeHack Winner.",
       tags: ["Healthcare", "IoT", "Social Impact"],
       image: "/lovable-uploads/6f252514-c56c-4a80-a4d3-5502d1fce17f.png"
-    },
-    {
-      title: "Wireless Sensor Node (WSN)",
-      subtitle: "Solar-Powered Fire Detection System",
-      description: "Built a solar-powered wireless sensor node with temperature and smoke detection for early fire monitoring. Integrated a closed-loop DC/DC boost converter with PI control, Bluetooth communication, and a custom GUI. Awarded Best in Course.",
-      tags: ["Power Electronics", "Embedded Systems", "IoT"],
-      links: [
-        { name: "GitHub Repo", url: "https://github.com/theGeekyBoi/IDP-WSN-G3" },
-        { name: "Final Report", url: "https://drive.google.com/file/d/1h9KD5ITG0ahq8rcduBs8dH2fFiilx71S/view?usp=sharing" }
-      ]
     }
   ];
 
