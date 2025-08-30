@@ -23,7 +23,7 @@ const Projects = () => {
       image: "/lovable-uploads/0393c7f2-eaac-4f54-a281-2af3271d7da9.png"
     },
     {
-      title: "Wireless Sensor Node (WSN)",
+      title: "Wireless Sensor Node",
       subtitle: "Solar-Powered Fire Detection System",
       description: "Built a solar-powered wireless sensor node with temperature and smoke detection for early fire monitoring. Integrated a closed-loop DC/DC boost converter with PI control, Bluetooth communication, and a custom GUI. Awarded Best in Course.",
       tags: ["Power Electronics", "Embedded Systems", "IoT"],
@@ -93,7 +93,7 @@ const Projects = () => {
               </div>
               <div className={`bg-gray-100 rounded-2xl h-96 flex items-center justify-center overflow-hidden ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 {project.image ? (
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                  <img src={project.image} alt={project.title} className={`w-full h-full ${project.title === 'Wireless Sensor Node' ? 'object-contain' : 'object-cover'}`} />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-gray-400">
                     Project Showcase
