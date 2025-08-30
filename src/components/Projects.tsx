@@ -35,6 +35,16 @@ const Projects = () => {
       description: "Real-time vitals monitoring cubicle for rural India. CodeHack Winner.",
       tags: ["Healthcare", "IoT", "Social Impact"],
       image: "/lovable-uploads/6f252514-c56c-4a80-a4d3-5502d1fce17f.png"
+    },
+    {
+      title: "Wireless Sensor Node (WSN)",
+      subtitle: "Solar-Powered Fire Detection System",
+      description: "Built a solar-powered wireless sensor node with temperature and smoke detection for early fire monitoring. Integrated a closed-loop DC/DC boost converter with PI control, Bluetooth communication, and a custom GUI. Awarded Best in Course.",
+      tags: ["Power Electronics", "Embedded Systems", "IoT"],
+      links: [
+        { name: "GitHub Repo", url: "https://github.com/theGeekyBoi/IDP-WSN-G3" },
+        { name: "Final Report", url: "https://drive.google.com/file/d/1h9KD5ITG0ahq8rcduBs8dH2fFiilx71S/view?usp=sharing" }
+      ]
     }
   ];
 
