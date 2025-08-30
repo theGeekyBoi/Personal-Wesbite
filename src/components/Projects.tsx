@@ -91,7 +91,7 @@ const Projects = () => {
                   </div>
                 )}
               </div>
-              <div className={`bg-white rounded-2xl h-96 flex items-center justify-center overflow-hidden ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+              <div className={`bg-gray-100 rounded-2xl h-96 flex items-center justify-center overflow-hidden ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                 {project.image ? (
                   <img src={project.image} alt={project.title} className="w-full h-full object-contain" />
                 ) : (
